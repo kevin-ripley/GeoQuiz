@@ -1,4 +1,4 @@
-package com.bignerdranch.android.geoquiz
+package com.example.android.geoquiz
 
 import androidx.annotation.StringRes
 

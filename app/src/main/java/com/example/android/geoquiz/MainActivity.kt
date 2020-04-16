@@ -1,4 +1,4 @@
-package com.bignerdranch.android.geoquiz
+package com.example.android.geoquiz
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
+import com.example.android.geoquiz.QuizViewModel
 
 private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var questionTextView: TextView
 
     private val quizViewModel: QuizViewModel by lazy {
-        ViewModelProviders.of(this).get(QuizViewModel::class.java)
+        ViewModelProvider(this).get(QuizViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
